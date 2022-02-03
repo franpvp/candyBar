@@ -1,43 +1,97 @@
+
 * {
     padding: 0;
     margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
 }
+
 body {
-    background: #fff;
+    background: url(/assets/img/fondo.jpg);
+    background-repeat: no-repeat;
     font-family: 'Moon Dance', cursive;
-
-}
-.navBar {
-    background: #000;
-    height: 47px;
-
 }
 
-.botonNav {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    padding: 10px;
-    font-size: 17px;
-    text-align: center;
+header {
+    display: block;
+    margin: 0 auto;
 }
-
-.botonNav:hover {
+.menu {
     background: #fff;
-    color: #000;
-    opacity: 0.8;
+}
+.menu ul {
+    background: #fff;
 }
 
-.icons {
+.menu ul li {
     display: inline-block;
-    padding: 8px;
 }
-.contacto {
-    display: inline-block;
+
+.menu ul li a{
+    color: #000;
+    display: flex;
+    padding: 5px 10px;
+    font-size: 25px;
     text-decoration: none;
 }
+.menu ul li a:hover{
+    padding: 5px 10px;
+    font-size: 25px;
+    text-decoration: none;
+    background: #ffa0b6;
+    border-radius: 20px;
+    color: #fff;
 
+}
+
+#menuRes{
+    display: none;
+    position: relative;
+    float: right;
+    background: #fff;
+    width: 100%;
+}
+
+#menuRes img {
+    width: 35px;
+    height: 35px;
+    margin-top: 6px;
+    margin-right: 3px;
+    background: none;
+}
+
+#menuRes img:hover{
+    transition-delay: 2s, 4ms;
+    transform: rotate(90deg);
+    opacity: .8;
+    cursor: pointer;
+}
+
+.faldon{
+    display: flex;
+    position: relative;
+
+}
+.iconBar ul li {
+    display: flex;
+    float: left;
+    flex-direction: row;
+}
+.iconBar ul li a{
+    display: flex;
+    padding: 5px 10px;
+    border-radius: 10px;
+    
+}
+.iconBar ul li a:hover{
+    background-color: #ccc;
+    
+}
 #bordes{
+    display: block;
+    float: left;
     margin: 0;
     padding: 0;
 }
@@ -50,3 +104,136 @@ body {
     display: table-cell;
 }
 
+
+.front a img{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+
+}
+
+.front .insideFront {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+ul, li {
+    list-style: none;
+
+}
+
+.backform{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    background: url(/assets/img/backfront.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100% 1100px;
+    
+    z-index: 90;
+
+}
+
+
+.form {
+    display: block;
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    background: #ffa0b6;
+    border: 1px solid #000;
+    z-index: 80;
+}
+
+.form h1 {
+    font-size: 50px;
+    position: relative;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+}
+
+.form input {
+    display: block;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 1px solid #226fc1;
+    font-family: Arial;
+    font-size: 16px;
+}
+.form textarea{
+    min-height: 120px;
+    max-height: 300px;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+    border: 1px solid #000;
+}
+
+.form input[type="submit"] {
+    width: 200px;
+    margin: 0 auto;
+    background: #82E8D3;
+    font-family: 'Moon Dance', cursive;
+    font-size: 25px;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+.form input[type="submit"]:hover {
+    opacity: .8;
+    color: #fff;
+    font-family: 'Moon Dance', cursive;
+}
+
+aside ul {
+    position: fixed;
+
+}
+aside ul li a img {
+    width: 50px;
+    height: 50px;
+}
+@media screen and (max-width: 600px){
+    .menu ul{
+        display: none;
+    }
+    .faldon {
+        display: block;
+        width: 100%;
+    }
+    
+    .front {
+        width: 100%;
+    }
+    .backform{
+        position: fixed;
+        display: flex;
+        width: 100%;
+        background-position: center;
+        background-size: 100% 1100px;
+    }
+    .form {
+        width: 100%;
+        margin: 20px;
+    }
+    
+}

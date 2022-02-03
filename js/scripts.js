@@ -4,7 +4,7 @@ window.addEventListener('resize', obtenerAncho);
 function obtenerAncho(){
   var width = document.documentElement.clientWidth;
   console.log(width);
-  generarBordes(width);  
+  generarBordes(width); 
 }
 
 
@@ -34,8 +34,6 @@ function generarBordes(width) {
     console.log("counter: " + index);
   }
 }
-
-
 
 
 
